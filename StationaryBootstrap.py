@@ -37,8 +37,8 @@ def StationaryBootstrap(data: np.ndarray, m, sampleLength)-> np.ndarray:
         Association, 89:428, 1303-1313, DOI: 10.1080/01621459.1994.10476870    
 
     Implemented by Gregor Fabjan from Qnity Consultants on 12/11/2021.
-
     """
+    
     accept = 1/m  
     lenData = data.shape[0]
 
