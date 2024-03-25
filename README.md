@@ -44,4 +44,5 @@ sampleLength = 12
 ans = StationaryBootstrap(data, m, sampleLength)
 
 print(ans)
+# Out[0]:  4.0
 ```
