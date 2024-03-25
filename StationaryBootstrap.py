@@ -1,6 +1,6 @@
 import numpy as np
 
-def StationaryBootstrap(data: np.ndarray, m, sampleLength)-> np.ndarray:
+def StationaryBootstrap(data: np.ndarray, m: float, sampleLength: int)-> np.ndarray:
     """
     Returns a bootstraped sample of the time-series "data" of length "sampleLength. 
     The algorithm used is stationary bootstrap from 1994 Politis & Romano.
@@ -37,12 +37,12 @@ def StationaryBootstrap(data: np.ndarray, m, sampleLength)-> np.ndarray:
         Association, 89:428, 1303-1313, DOI: 10.1080/01621459.1994.10476870    
 
     Implemented by Gregor Fabjan from Qnity Consultants on 12/11/2021.
+
     """
-    
     accept = 1/m  
     lenData = data.shape[0]
 
-    sampleIndex = np.random.randint(0,high =lenData,size=1);
+    sampleIndex = np.random.randint(0,high =lenData,size=1)
     sample = np.zeros((sampleLength,1))
     for iSample in range(sampleLength):
         if np.random.uniform(0,1,1)>=accept:
